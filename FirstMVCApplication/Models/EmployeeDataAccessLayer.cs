@@ -42,7 +42,7 @@ namespace FirstMVCApplication.Models
         } //End Of GetAllEmployees Method
 
         //To Add new employee record in database
-        public void AddNewEmployee( Employee employee)
+        public void AddNewEmployee(Employee employee)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
             {

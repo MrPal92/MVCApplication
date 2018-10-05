@@ -1,0 +1,40 @@
+﻿@model FirstMVCApplication.Models.Employee
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+<h4>Employee</h4>
+
+<div class="row">
+    <div class="col-md-4">
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <td>@Model.Name</td>
+            </tr>
+
+            <tr>
+                <th>Gender</th>
+                <td>@Model.Gender</td>
+            </tr>
+
+            <tr>
+                <th>Department</th>
+                <td>@Model.Department</td>
+            </tr>
+
+            <tr>
+                <th>City</th>
+                <td>@Model.City</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back To List</a>
+    </form>
+</div>

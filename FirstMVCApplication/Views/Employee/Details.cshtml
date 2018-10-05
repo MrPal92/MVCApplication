@@ -1,0 +1,37 @@
+﻿@model FirstMVCApplication.Models.Employee
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+<h4>Employee</h4>
+<br />
+<div class="row">
+    <div class="col-md-4">
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <td>@Model.Name</td>
+            </tr>
+
+            <tr>
+                <th>Gender</th>
+                <td>@Model.Gender</td>
+            </tr>
+
+            <tr>
+                <th>Department</th>
+                <td>@Model.Department</td>
+            </tr>
+
+            <tr>
+                <th>City</th>
+                <td>@Model.City</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back To List</a>
+</div>
